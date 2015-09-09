@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E847F1A1BA07FA900BE8027 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E847F191BA07FA900BE8027 /* KeychainWrapper.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E847F091BA07F6600BE8027 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E847EE91BA07F6600BE8027 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E847EF01BA07F6600BE8027;
+			remoteInfo = KeychainWrapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E847EF11BA07F6600BE8027 /* KeychainWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = KeychainWrapper.app; path = "/Users/kefranks/Documents/Projects/Kef_Projects/KeychainWrapper/build/Debug-iphoneos/KeychainWrapper.app"; sourceTree = "<absolute>"; };
+		1E847F081BA07F6600BE8027 /* KeychainWrapperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = KeychainWrapperUITests.xctest; path = "/Users/kefranks/Documents/Projects/Kef_Projects/KeychainWrapper/build/Debug-iphoneos/KeychainWrapperUITests.xctest"; sourceTree = "<absolute>"; };
+		1E847F191BA07FA900BE8027 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1E847EEE1BA07F6600BE8027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E847F051BA07F6600BE8027 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1E847EE81BA07F6600BE8027 = {
+			isa = PBXGroup;
+			children = (
+				1E847EF31BA07F6600BE8027 /* KeychainWrapper */,
+			);
+			sourceTree = "<group>";
+		};
+		1E847EF31BA07F6600BE8027 /* KeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				1E847F191BA07FA900BE8027 /* KeychainWrapper.swift */,
+			);
+			path = KeychainWrapper;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1E847EF01BA07F6600BE8027 /* KeychainWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E847F111BA07F6600BE8027 /* Build configuration list for PBXNativeTarget "KeychainWrapper" */;
+			buildPhases = (
+				1E847EED1BA07F6600BE8027 /* Sources */,
+				1E847EEE1BA07F6600BE8027 /* Frameworks */,
+				1E847EEF1BA07F6600BE8027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainWrapper;
+			productName = KeychainWrapper;
+			productReference = 1E847EF11BA07F6600BE8027 /* KeychainWrapper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1E847F071BA07F6600BE8027 /* KeychainWrapperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E847F141BA07F6600BE8027 /* Build configuration list for PBXNativeTarget "KeychainWrapperUITests" */;
+			buildPhases = (
+				1E847F041BA07F6600BE8027 /* Sources */,
+				1E847F051BA07F6600BE8027 /* Frameworks */,
+				1E847F061BA07F6600BE8027 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E847F0A1BA07F6600BE8027 /* PBXTargetDependency */,
+			);
+			name = KeychainWrapperUITests;
+			productName = KeychainWrapperUITests;
+			productReference = 1E847F081BA07F6600BE8027 /* KeychainWrapperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1E847EE91BA07F6600BE8027 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Franks, Kent";
+				TargetAttributes = {
+					1E847EF01BA07F6600BE8027 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					1E847F071BA07F6600BE8027 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 1E847EF01BA07F6600BE8027;
+					};
+				};
+			};
+			buildConfigurationList = 1E847EEC1BA07F6600BE8027 /* Build configuration list for PBXProject "KeychainWrapper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1E847EE81BA07F6600BE8027;
+			productRefGroup = 1E847EE81BA07F6600BE8027;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1E847EF01BA07F6600BE8027 /* KeychainWrapper */,
+				1E847F071BA07F6600BE8027 /* KeychainWrapperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E847EEF1BA07F6600BE8027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E847F061BA07F6600BE8027 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1E847EED1BA07F6600BE8027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E847F1A1BA07FA900BE8027 /* KeychainWrapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E847F041BA07F6600BE8027 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E847F0A1BA07F6600BE8027 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E847EF01BA07F6600BE8027 /* KeychainWrapper */;
+			targetProxy = 1E847F091BA07F6600BE8027 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E847F0F1BA07F6600BE8027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1E847F101BA07F6600BE8027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1E847F121BA07F6600BE8027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KeychainWrapper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KefBytesLLC.KeychainWrapper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E847F131BA07F6600BE8027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KeychainWrapper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KefBytesLLC.KeychainWrapper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1E847F151BA07F6600BE8027 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KeychainWrapperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KefBytesLLC.KeychainWrapperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KeychainWrapper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1E847F161BA07F6600BE8027 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = KeychainWrapperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = KefBytesLLC.KeychainWrapperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = KeychainWrapper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1E847EEC1BA07F6600BE8027 /* Build configuration list for PBXProject "KeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E847F0F1BA07F6600BE8027 /* Debug */,
+				1E847F101BA07F6600BE8027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E847F111BA07F6600BE8027 /* Build configuration list for PBXNativeTarget "KeychainWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E847F121BA07F6600BE8027 /* Debug */,
+				1E847F131BA07F6600BE8027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1E847F141BA07F6600BE8027 /* Build configuration list for PBXNativeTarget "KeychainWrapperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E847F151BA07F6600BE8027 /* Debug */,
+				1E847F161BA07F6600BE8027 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1E847EE91BA07F6600BE8027 /* Project object */;
+}
