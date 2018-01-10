@@ -1,70 +1,90 @@
 //
-//  KeychainWrapper.swift
-//  Passwords
+//  KeychainService.swift
+//  TTS_Words_And_Weather
 //
-//  Created by Franks, Kent on 9/9/15.
-//  Copyright © 2015 Franks, Kent. All rights reserved.
+//  Created by Franks, Kent Eric on 3/27/17.
+//  Copyright © 2017 KefBytes. All rights reserved.
 //
 
 import Foundation
+import Security
 
-class KeychainWrapper {
+// Constant Identifiers
+let userAccount = "AuthenticatedUser"
+let accessGroup = "SecuritySerivice"
+
+
+/**
+ *  User defined keys for new entry
+ *  Note: add new keys for new secure item and use them in load and save methods
+ */
+
+let passwordKey = "TTSPasswordsApp_Password"
+
+// Arguments for the keychain queries
+let kSecClassValue = String(format: kSecClass as String)
+let kSecAttrAccountValue = String(format: kSecAttrAccount as String)
+let kSecValueDataValue = String(format: kSecValueData as String)
+let kSecClassGenericPasswordValue = String(format: kSecClassGenericPassword as String)
+let kSecAttrServiceValue = String(format: kSecAttrService as String)
+let kSecMatchLimitValue = String(format: kSecMatchLimit as String)
+let kSecReturnDataValue = String(format: kSecReturnData as String)
+let kSecMatchLimitOneValue = String(format: kSecMatchLimitOne as String)
+
+public class KeychainService: NSObject {
     
-    class func set(key: String, value: String) -> Bool {
-        if let data = value.dataUsingEncoding(NSUTF8StringEncoding)
-        {
-            return set(key, value: data)
-        }
-        return false
+    /**
+     * Exposed methods to perform save and load queries.
+     */
+    
+    public class func savePassword(token: String) {
+        self.save(service: passwordKey as String, data: token)
     }
     
-    class func set(key: String, value: NSData) -> Bool {
-        let keyQuery = [
-            (kSecClass as String)       : kSecClassGenericPassword,
-            (kSecAttrAccount as String) : key,
-            (kSecValueData as String)   : value
-        ]
-        SecItemDelete(keyQuery as CFDictionaryRef)
-        return SecItemAdd(keyQuery as CFDictionaryRef, nil) == noErr
+    public class func loadPassword() -> String? {
+        return self.load(service: passwordKey as String)
     }
     
-    class func get(key: String) -> NSString? {
-        if let data = getData(key)
-        {
-            return NSString(data: data, encoding: NSUTF8StringEncoding)
-        }
-        return nil
-    }
+    /**
+     * Internal methods for querying the keychain.
+     */
     
-    class func getData(key: String) -> NSData? {
-        let keyQuery = [
-            (kSecClass as String)       : kSecClassGenericPassword,
-            (kSecAttrAccount as String) : key,
-            (kSecReturnData as String)  : kCFBooleanTrue,
-            (kSecMatchLimit as String)  : kSecMatchLimitOne
-        ]
-        var dataTypeRef: Unmanaged<AnyObject>?
-        let status: OSStatus = withUnsafeMutablePointer(&dataTypeRef) { SecItemCopyMatching(keyQuery as CFDictionaryRef, UnsafeMutablePointer($0)) }
+    private class func save(service: String, data: String) {
+        let dataFromString: NSData = data.data(using: String.Encoding(rawValue: String.Encoding.utf8.rawValue), allowLossyConversion: false)! as NSData
         
-        if status == noErr && dataTypeRef != nil
-        {
-            return dataTypeRef!.takeRetainedValue() as? NSData
+        // Instantiate a new default keychain query
+        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, service, userAccount, dataFromString], forKeys: [kSecClassValue as NSCopying, kSecAttrServiceValue as NSCopying, kSecAttrAccountValue as NSCopying, kSecValueDataValue as NSCopying])
+        
+        // Delete any existing items
+        SecItemDelete(keychainQuery as CFDictionary)
+        
+        // Add the new keychain item
+        SecItemAdd(keychainQuery as CFDictionary, nil)
+    }
+    
+    private class func load(service: String) -> String? {
+        // Instantiate a new default keychain query
+        // Tell the query to return a result
+        // Limit our results to one item
+        let keychainQuery: NSMutableDictionary = NSMutableDictionary(objects: [kSecClassGenericPasswordValue, service, userAccount, kCFBooleanTrue, kSecMatchLimitOneValue], forKeys: [kSecClassValue as NSCopying, kSecAttrServiceValue as NSCopying, kSecAttrAccountValue as NSCopying, kSecReturnDataValue as NSCopying, kSecMatchLimitValue as NSCopying])
+        
+        var dataTypeRef :AnyObject?
+        
+        // Search for the keychain items
+        let status: OSStatus = SecItemCopyMatching(keychainQuery, &dataTypeRef)
+        var contentsOfKeychain: String? = nil
+        
+        if status == errSecSuccess {
+            if let retrievedData = dataTypeRef as? NSData {
+                contentsOfKeychain = String(data: retrievedData as Data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))
+            }
+        } else {
+            print("Nothing was retrieved from the keychain. Status code \(status)")
         }
-        return nil
-    }
-    
-    class func delete(key: String) -> Bool {
-        let query = [
-            (kSecClass as String)       : kSecClassGenericPassword,
-            (kSecAttrAccount as String) : key
-        ]
-        return SecItemDelete(query as CFDictionaryRef) == noErr
-    }
-    
-    class func clear() -> Bool {
-        let keyQuery = [
-            (kSecClass as String): kSecClassGenericPassword
-        ]
-        return SecItemDelete(keyQuery as CFDictionaryRef) == noErr
+        
+        return contentsOfKeychain
     }
 }
+
+
+
